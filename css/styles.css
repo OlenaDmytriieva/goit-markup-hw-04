@@ -89,6 +89,9 @@ img {
         line-height: 1.5;
         letter-spacing: 0.02em;
         padding: 24px 0;
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation-list-link:hover,
@@ -114,6 +117,9 @@ img {
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
+        transition-property: color;
+                transition-duration: 250ms;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-list-link:hover,
@@ -140,6 +146,11 @@ img {
 
 .section-page {
         background: #2E2F42;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/people-office.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        max-width: 1440px;
         padding: 188px 0;
 }
 
@@ -150,19 +161,22 @@ img {
         line-height: 1.5;
         letter-spacing: 0.04em;
         border-radius: 4px;
-        background: #4D5AE5;
+        background-color: #4D5AE5;
         border: none;
         cursor: pointer;
         padding: 16px 32px;
         margin: 0 auto;
         display: block;
-        min-width: 169px
+        min-width: 169px;
+        transition-property: background-color;
+                transition-duration: 250ms;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         
 }
 
 .button-order:hover,
 .button-order:focus {
-        background: #404BBF;
+        background-color: #404BBF;
 }
 
 .section-about {}
@@ -196,6 +210,24 @@ img {
 
 .section-about-item {
         flex-basis: calc((100% - 72px) / 4);
+        display: flex;
+        flex-direction: column;
+        gap: 8px 24px;
+}
+
+
+.section-about-icon-box {
+        height: 112px;
+        border-radius: 4px;
+        border: 1px solid #8E8F99;
+        background: #F4F4FD;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.section-about-icon {
+        
 }
 
 .section-about-subtitle {
@@ -205,6 +237,7 @@ img {
         line-height: 1.2;
         letter-spacing: 0.02em;
         margin-bottom: 8px;
+      
 }
 
 .section-about-text {
@@ -239,6 +272,7 @@ img {
     background-color: #FFFFFF;
     flex-basis: calc((100% - 72px) / 4);
         border-radius: 0px 0px 4px 4px;
+        box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .section-team-image {}
@@ -258,7 +292,41 @@ img {
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
+        margin-bottom: 8px;
 }
+
+.team-soc-list {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
+}
+
+.team-soc-item {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #4D5AE5;
+        transition-property: background-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.team-soc-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        fill: #FFF;
+
+}
+
+.team-soc-item:hover, 
+.team-soc-item:focus {
+        background-color: #31D0AA;
+} 
 
 .staff-card {
         padding: 32px 0;
@@ -290,7 +358,11 @@ img {
 
 .section-portfolio-item {
         flex-basis: calc((100% - 48px) / 3);
-        
+        position: relative;
+        overflow: hidden;
+        transition-property: box-shadow;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         
         
 }
@@ -304,8 +376,38 @@ img {
 }
 
 .section-portfolio-image {
-        /* width: 100%; */
+       
         
+
+}
+
+.overlay-text {
+        color: #F4F4FD;
+                font-size: 16px;
+                line-height: 1.5;
+                letter-spacing: 0.02em;
+                background-color: #4D5AE5;
+                padding: 40px 32px 164px;
+}
+
+.overlay {
+        position: absolute;
+        top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transform: translateY(100%);
+                transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                
+}
+
+.section-portfolio-item:hover .overlay {
+        transform: translateY(0);
+       
+}
+
+.section-portfolio-item:hover {
+        box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 
 }
 
@@ -331,7 +433,16 @@ img {
 }
 
 .bottom {
+        display: flex;
+        gap: 120px;
+}
 
+.footer-soc-title {
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
 }
 
 .footer-text {
@@ -345,4 +456,38 @@ img {
 .footer-logo {
         margin-bottom: 16px;
         display: inline-block;
+}
+
+.footer-soc-list {
+        display: flex;
+        gap: 16px;
+}
+
+.footer-left {
+        display: flex;
+        flex-direction: column;
+}
+
+.footer-right {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+}
+
+.footer-soc-item {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #4D5AE5;
+        
+}
+
+.footer-soc-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        fill: #FFF;
+
 }
