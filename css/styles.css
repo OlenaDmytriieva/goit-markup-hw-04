@@ -62,7 +62,7 @@ img {
 .navigation {
         display: flex;
         align-items: center;
-        padding: 24px 0;
+       
        
        
 }
@@ -88,7 +88,8 @@ img {
 }
 
 .navigation-list-link {
-        color: #404BBF;
+        display: block;
+        color: #2E2F42;
         font-size: 16px;
         font-weight: 500;
         line-height: 1.5;
@@ -97,7 +98,11 @@ img {
         transition-property: color;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.first {
         position: relative;
+        color: #404BBF;    
 }
 
 .navigation-list-link:hover,
@@ -105,7 +110,7 @@ img {
         color: #404BBF;
 }
 
-.navigation-list-link::after {
+.first::after {
         content: '';
         position: absolute;
         left: 0;
@@ -114,11 +119,7 @@ img {
         height: 4px;
         border-radius: 2px;
         background-color: #404bbf;
-        background-color: transparent;
-        transition-property: background-color;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        
+       
 }
 
 .navigation-list-link:hover::after,
@@ -422,23 +423,20 @@ img {
         font-size: 16px;
                 line-height: 1.5;
                 letter-spacing: 0.02em;
-                
+                position: absolute;
+                        background-color: #4D5AE5;
+                        padding: 40px 32px;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        transform: translateY(100%);
+                        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.overlay {
-        position: absolute;
-        background-color: #4D5AE5;
-        padding: 40px 32px;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transform: translateY(100%);
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-                
-}
+        
 
-.section-portfolio-item:hover .overlay {
+.section-portfolio-item:hover .overlay-text {
         transform: translateY(0);
        
 }
