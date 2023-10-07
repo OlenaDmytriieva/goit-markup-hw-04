@@ -100,7 +100,7 @@ img {
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.first {
+.current {
         position: relative;
         color: #404BBF;    
 }
@@ -110,7 +110,7 @@ img {
         color: #404BBF;
 }
 
-.first::after {
+.current::after {
         content: '';
         position: absolute;
         left: 0;
