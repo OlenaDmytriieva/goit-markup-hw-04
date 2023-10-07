@@ -36,6 +36,7 @@ img {
 
 .header {
         border-bottom: 1px solid #E7E9FC;
+        box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .logo {
@@ -87,7 +88,7 @@ img {
 }
 
 .navigation-list-link {
-        color: #2E2F42;
+        color: #404BBF;
         font-size: 16px;
         font-weight: 500;
         line-height: 1.5;
@@ -96,6 +97,7 @@ img {
         transition-property: color;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
 }
 
 .navigation-list-link:hover,
@@ -103,11 +105,15 @@ img {
         color: #404BBF;
 }
 
-.navigation-list-item::after {
-        content: "";
+.navigation-list-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
         width: 100%;
         height: 4px;
         border-radius: 2px;
+        background-color: #404bbf;
         background-color: transparent;
         transition-property: background-color;
         transition-duration: 250ms;
@@ -115,8 +121,8 @@ img {
         
 }
 
-.navigation-list-item:hover::after,
-.navigation-list-item:focus::after {
+.navigation-list-link:hover::after,
+.navigation-list-link:focus::after {
         background-color: #404BBF;
 }
 
@@ -247,6 +253,7 @@ img {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 8px;
 }
 
 .section-about-icon {
@@ -328,11 +335,8 @@ img {
 .team-soc-item {
         width: 40px;
         height: 40px;
-        border-radius: 50%;
-        background-color: #4D5AE5;
-        transition-property: background-color;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        
+        
 
 }
 
@@ -342,13 +346,18 @@ img {
         justify-content: center;
         width: 100%;
         height: 100%;
-        fill: #FFF;
+        fill: #f4f4fd;
+        border-radius: 50%;
+        background-color: #4D5AE5;
+        transition-property: background-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
-.team-soc-item:hover, 
-.team-soc-item:focus {
-        background-color: #31D0AA;
+.team-soc-link:hover, 
+.team-soc-link:focus {
+        background-color: #404bbf;
 } 
 
 .staff-card {
@@ -381,13 +390,17 @@ img {
 
 .section-portfolio-item {
         flex-basis: calc((100% - 48px) / 3);
-        position: relative;
-        overflow: hidden;
+        
         transition-property: box-shadow;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         
         
+}
+
+.portfolio-image-box {
+        position: relative;
+        overflow: hidden;
 }
 
 .card-content {
@@ -406,21 +419,22 @@ img {
 
 .overlay-text {
         color: #F4F4FD;
-                font-size: 16px;
+        font-size: 16px;
                 line-height: 1.5;
                 letter-spacing: 0.02em;
-                background-color: #4D5AE5;
-                padding: 40px 32px 164px;
+                
 }
 
 .overlay {
         position: absolute;
+        background-color: #4D5AE5;
+        padding: 40px 32px;
         top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                transform: translateY(100%);
-                transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateY(100%);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
                 
 }
 
@@ -457,7 +471,8 @@ img {
 
 .bottom {
         display: flex;
-        gap: 120px;
+        
+        align-items: baseline;
 }
 
 .footer-soc-title {
@@ -466,6 +481,7 @@ img {
         font-weight: 500;
         line-height: 1.5;
         letter-spacing: 0.02em;
+        margin-bottom: 16px;
 }
 
 .footer-text {
@@ -489,22 +505,21 @@ img {
 .footer-left {
         display: flex;
         flex-direction: column;
+        margin-right: 120px;
 }
 
 .footer-right {
         display: flex;
         flex-direction: column;
         gap: 16px;
+        
 }
 
 .footer-soc-item {
         width: 40px;
         height: 40px;
-        border-radius: 50%;
-        background-color: #4D5AE5;
-        transition-property: background-color;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        
+        
         
 }
 
@@ -514,11 +529,16 @@ img {
         justify-content: center;
         width: 100%;
         height: 100%;
-        fill: #FFF;
+        fill: #f4f4fd;
+        border-radius: 50%;
+        background-color: #4D5AE5;
+        transition-property: background-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
-.footer-soc-item:hover,
-.footer-soc-item:focus {
+.footer-soc-link:hover,
+.footer-soc-link:focus {
         background-color: #31D0AA;
 }
