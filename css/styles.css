@@ -240,9 +240,6 @@ img {
 
 .section-about-item {
         flex-basis: calc((100% - 72px) / 4);
-        display: flex;
-        flex-direction: column;
-        gap: 8px 24px;
 }
 
 
@@ -507,9 +504,6 @@ img {
 }
 
 .footer-right {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
         
 }
 
